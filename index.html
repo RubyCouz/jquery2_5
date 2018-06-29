@@ -2,7 +2,6 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <script src="assets/js/jquery-3.2.1.js"></script>
   <title>Exercice 5</title>
 </head>
 <body>
@@ -11,17 +10,12 @@
     <label for="firstName">Prénom : </label><input type="text" name="firstName" id="firstName" />
     <button type="button" name="button">Envoyer</button>
   </form>
+  <script src="assets/js/jquery-3.2.1.js"></script>
   <script>
-  $('#lastName').focus(function() {
+  $('#lastName, #firstName').focus(function() {
     $(this).css({'border' : '1px green solid'});
   });
-  $('#firstName').focus(function() {
-    $(this).css({'border' : '1px green solid'});
-  });
-  $('#lastName').focusout(function() {
-    $(this).css({'border' : '1px red solid'});
-  });
-  $('#firstName').focusout(function() {
+  $('#lastName, #firstName').blur(function() {
     $(this).css({'border' : '1px red solid'});
   });
   </script>
